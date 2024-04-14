@@ -40,3 +40,58 @@ function activateLink() {
 listItem.forEach((item) => {
   item.addEventListener("click", activateLink);
 });
+
+// game
+
+const words = [
+  { word: "Hello", translation: "Bonjour" },
+  { word: "Goodbye", translation: "Au revoir" },
+  // Add more words and translations here
+];
+
+let currentWordIndex = 0;
+
+function displayWord() {
+  const wordDisplay = document.getElementById("word-display");
+  wordDisplay.textContent = words[currentWordIndex].word;
+}
+
+function displayOptions() {
+  const optionsContainer = document.getElementById("options");
+  optionsContainer.innerHTML = "";
+
+  const translations = words.map((word) => word.translation);
+  const shuffledTranslations = shuffleArray(translations);
+
+  shuffledTranslations.forEach((translation) => {
+    const optionBtn = document.createElement("button");
+    optionBtn.textContent = translation;
+    optionBtn.addEventListener("click", () => checkAnswer(translation));
+    optionsContainer.appendChild(optionBtn);
+  });
+}
+
+function checkAnswer(translation) {
+  const correctTranslation = words[currentWordIndex].translation;
+  if (translation === correctTranslation) {
+    alert("Correct!");
+  } else {
+    alert("Incorrect. Try again!");
+  }
+}
+
+function nextWord() {
+  currentWordIndex = (currentWordIndex + 1) % words.length;
+  displayWord();
+  displayOptions();
+}
+
+function shuffleArray(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+document.getElementById("next-btn").addEventListener("click", nextWord);
+
+// Initialize the game
+displayWord();
+displayOptions();
