@@ -27,16 +27,16 @@ const loadHTML = async function (parent, url) {
       // ns.remove();
     });
   }
-  if (html.includes("<style")) {
-    const ses = tc.querySelectorAll("style");
-    ses.forEach((se) => {
-      const jsCode = se.textContent?.trim();
-      const ns = document.createElement("style");
-      ns.textContent = jsCode || "";
-      // ? kinda works as well
-      document.head.appendChild(ns);
-    });
-  }
+  // if (html.includes("<style")) {
+  //   const ses = tc.querySelectorAll("style");
+  //   ses.forEach((se) => {
+  //     const jsCode = se.textContent?.trim();
+  //     const ns = document.createElement("style");
+  //     ns.textContent = jsCode || "";
+  //     // ? kinda works as well
+  //     document.head.appendChild(ns);
+  //   });
+  // }
 };
 
 const listItem = document.querySelectorAll(".list");
