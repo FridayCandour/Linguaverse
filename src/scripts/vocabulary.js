@@ -1,14 +1,28 @@
-const CommonVocabulary = {
-  Greetings: ["Hello", "Hi", "Good morning", "Good afternoon", "Good evening"],
-  Numbers: ["One", "Two", "Three", "Four", "Five"],
-  Colors: ["Red", "Blue", "Yellow", "Green", "Purple"],
-  "Days of the Week": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-  "Months of the Year": ["January", "February", "March", "April", "May"],
-  "Common Objects": ["Table", "Chair", "Book", "Pen", "Car"],
-  "Food and Drinks": ["Apple", "Banana", "Bread", "Water", "Coffee"],
-  "Family Members": ["Mother", "Father", "Brother", "Sister", "Grandmother"],
-  Animals: ["Dog", "Cat", "Bird", "Elephant", "Lion"],
-  Clothing: ["Shirt", "Pants", "Shoes", "Dress", "Hat"],
+const vocabularies = {
+  "Common Vocabulary": {
+    Greetings: [
+      "Hello",
+      "Hi",
+      "Good morning",
+      "Good afternoon",
+      "Good evening",
+    ],
+    Numbers: ["One", "Two", "Three", "Four", "Five"],
+    Colors: ["Red", "Blue", "Yellow", "Green", "Purple"],
+    "Days of the Week": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+    ],
+    "Months of the Year": ["January", "February", "March", "April", "May"],
+    "Common Objects": ["Table", "Chair", "Book", "Pen", "Car"],
+    "Food and Drinks": ["Apple", "Banana", "Bread", "Water", "Coffee"],
+    "Family Members": ["Mother", "Father", "Brother", "Sister", "Grandmother"],
+    Animals: ["Dog", "Cat", "Bird", "Elephant", "Lion"],
+    Clothing: ["Shirt", "Pants", "Shoes", "Dress", "Hat"],
+  },
   "Advanced Vocabulary": {
     Technology: ["Computer", "Smartphone", "Internet", "Software", "Website"],
     Science: ["Biology", "Chemistry", "Physics", "Experiment", "Scientist"],
@@ -47,7 +61,7 @@ const CommonVocabulary = {
   },
   "Cultural Vocabulary": {
     Cuisine: ["Sushi", "Pizza", "Curry", "Tacos", "Pasta"],
-    Festivals: ["Carnival", "Diwali", "Oktoberfest", "Hanami", "Thanksgiving"],
+    Festivals: ["Carnival", "Diwali", "Oktoberfest", "Thanksgiving"],
     Traditions: ["Wedding", "Birthday", "New Year", "Graduation", "Funeral"],
     Sports: ["Soccer", "Basketball", "Cricket", "Rugby", "Sumo Wrestling"],
     "Music Genres": ["Rock", "Jazz", "Reggae", "Hip-hop", "Classical"],

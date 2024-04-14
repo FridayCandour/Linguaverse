@@ -452,4 +452,18 @@ body.light {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   padding-bottom: 20px;
+  padding-top: 2rem;
+}
+
+.flex-x {
+  display: flex;
+  align-items: center;
+  /* border: 1px red solid; */
+  gap: 4px;
+}
+
+.action-wrapper {
+}
+.action-wrapper img {
+  max-width: 100px;
 }
