@@ -56,5 +56,5 @@ document.addEventListener("DOMContentLoaded", () => {
     loadHTML("user", "/src/html/lang.html");
   });
   loadHTML("sections", "/src/html/progress.html");
-  loadHTML("sections", "/src/html/explorer.html");
+  loadHTML("sections", "/src/html/chat.html");
 });
