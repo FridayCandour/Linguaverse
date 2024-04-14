@@ -7,7 +7,7 @@
     border-radius: 12px;
     max-height: 48px;
     min-width: 360px;
-    max-width: 600px;
+    max-width: 540px;
     width: 90%;
     margin: 2rem auto 0px;
   }
@@ -19,6 +19,7 @@
     height: 100% !important;
     min-height: 42px;
     padding-left: 1rem;
+    width: 96%;
   }
   .chat-form button {
     background-color: #e2e3e8;
@@ -49,9 +50,9 @@
     </ul>
   </div>
   <!--  -->
-  <form id="chat-form" class="chat-form">
+  <form id="chat-form" class="chat-form" onsubmit="return fromC(e)">
     <input type="text" id="user-message" placeholder="Ask me anything..." />
-    <button class="btn-flat">
+    <button class="btn-flat" onclick="fromC()">
       <svg
         aria-hidden="true"
         focusable="false"
@@ -72,27 +73,24 @@
 </div>
 
 <script>
-  const generate = async ({ image, text, model }) => {
+  const generate = async ({ text, lang }) => {
     try {
       const cs = new AbortController();
       const to = setTimeout(() => {
         cs.abort();
       }, 2 * 60 * 1000);
-      const res = await fetch("", {
-        headers: { "Content-Type": "application/json" },
-        signal: cs.signal,
-        body: JSON.stringify(
-          image
-            ? {
-                prompt: text?.trim(),
-                img: image,
-              }
-            : {
-                prompt: text?.trim(),
-              }
-        ),
-        method: "POST",
-      });
+      const res = await fetch(
+        "https://linguaverse-api.uiedbook.workers.dev/chat",
+        {
+          headers: { "Content-Type": "application/json" },
+          signal: cs.signal,
+          body: JSON.stringify({
+            message: text,
+            lang,
+          }),
+          method: "POST",
+        }
+      );
       clearTimeout(to);
       const out = await res.json();
 
@@ -127,8 +125,8 @@
     }
   };
 
-  const addUserMSG = ({ image, text }) => {
-    // console.log({ image, text, model });
+  const addUserMSG = ({ text }) => {
+    console.log({ text });
     const history = document.getElementById("chat-history");
     const empty = document.getElementById("empty");
     if (empty) {
@@ -139,7 +137,7 @@
       div(
         { className: "user" },
         img({
-          src: "./images/user.png",
+          src: "./assets/user.png",
           alt: "AI",
           className: "chatter",
         }),
@@ -170,7 +168,6 @@
     loader.style.display = "inline-grid";
     history.appendChild(loader);
     loader.scrollIntoView({ behavior: "smooth", block: "start" });
-    document.getElementById("loader").style.display = "inline-grid";
     let data = generate({ text, model });
 
     // call api
@@ -179,7 +176,11 @@
         { className: "ai-message" },
         div(
           { className: "user" },
-          img({ src: "./images/icon.png", alt: "AI", className: "chatter" }),
+          img({
+            src: "./assets/apple-touch-icon.png",
+            alt: "AI",
+            className: "chatter",
+          }),
           span("Browser AI")
         ),
         div(
@@ -204,25 +205,11 @@
     msgHtml.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const ai = (e) => {
-    e?.preventDefault();
+  const fromC = (e) => {
+    e.preventDefault();
     const usersInput = document.getElementById("user-message");
-    if (usersInput?.value) {
-      addUserMSG({ text: usersInput.value });
-      usersInput.value = "";
-    }
+    addUserMSG({
+      text: usersInput.value,
+    });
   };
-
-  document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("button-proc").onclick = (e) => {
-      ai(e);
-    };
-    document.getElementById("button-process").onclick = (e) => {
-      e?.preventDefault();
-      const usersInput = document.getElementById("user-message-1");
-      addUserMSG({
-        text: `${usersInput.value} ${I_text ? `"${I_text}"` : ""}`,
-      });
-    };
-  });
 </script>

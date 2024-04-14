@@ -21,9 +21,10 @@ const loadHTML = async function (parent, url) {
       const jsCode = se.textContent?.trim();
       const ns = document.createElement("script");
       ns.textContent = jsCode || "";
+      console.log({ jsCode });
       // ? kinda works
       document.body.appendChild(ns);
-      ns.remove();
+      // ns.remove();
     });
   }
   if (html.includes("<style")) {
