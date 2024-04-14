@@ -470,8 +470,20 @@ body.light {
   gap: 4px;
 }
 
-.action-wrapper {
-}
 .action-wrapper img {
   max-width: 100px;
+}
+
+/* Add styles for disabled buttons */
+div[disabled="true"] {
+  width: fit-content;
+  margin: auto;
+  opacity: 0.4;
+  cursor: not-allowed;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+div[disabled="true"]:hover {
+  background-color: #ddd;
 }

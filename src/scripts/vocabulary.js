@@ -53,7 +53,11 @@ const renderVocab = () => {
       return div(
         { className: "category" },
         h3(category),
-        ul(vocabularies[category].map((word) => li(word + ", ")))
+        ul(
+          vocabularies[category].map((word) =>
+            li(word + ", ", { className: "word" })
+          )
+        )
       );
     })
   );
