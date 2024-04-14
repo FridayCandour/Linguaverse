@@ -290,8 +290,8 @@ img.chatter {
   width: 65px;
   aspect-ratio: 1;
   position: relative;
-  margin: 2rem auto;
-  margin-left: 45%;
+  margin: 2rem 0px;
+  margin-left: calc(50% - 34px);
   display: none;
 }
 .loader:before,

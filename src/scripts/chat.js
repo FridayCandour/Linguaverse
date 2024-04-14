@@ -62,7 +62,7 @@ const addAIMSG = async ({ text }) => {
   const history = document.getElementById("chat-history");
   // show loader
   const loader = document.getElementById("loader");
-  loader.style.display = "inline-grid";
+  loader.style.display = "block";
   history.appendChild(loader);
   loader.scrollIntoView({ behavior: "smooth", block: "start" });
   let data = await generate({ text });

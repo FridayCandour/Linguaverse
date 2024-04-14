@@ -55,7 +55,12 @@ const renderVocab = () => {
         h3(category),
         ul(
           vocabularies[category].map((word) =>
-            li(word + ", ", { className: "word" })
+            li(word, {
+              className: "word",
+              onclick() {
+                PlayTTs();
+              },
+            })
           )
         )
       );

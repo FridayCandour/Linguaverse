@@ -1,6 +1,75 @@
 <!-- progress -->
+
+<style>
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .progress {
+    margin-bottom: 40px;
+    min-width: 360px;
+    max-width: 50%;
+    margin: auto;
+  }
+
+  .progress-bar {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .progress-track {
+    height: 20px;
+    background-color: #007bff;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background-color: #0056b3;
+  }
+
+  .progress-label {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .score {
+    text-align: center;
+  }
+</style>
+
 <div id="progress" class="page">
-  <div class="">
-    <h1>Your Progress</h1>
+  <div class="flex-x" style="margin-top: 1rem">
+    <h2>Your Progress</h2>
   </div>
+  <section class="progress">
+    <h2>Your Progress</h2>
+    <div class="progress-bar">
+      <div class="progress-track">
+        <div class="progress-fill" style="width: 70%"></div>
+      </div>
+      <span class="progress-label">70% Complete</span>
+    </div>
+    <div class="score">
+      <h3>Your Score: 700/1000</h3>
+    </div>
+  </section>
 </div>

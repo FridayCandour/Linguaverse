@@ -4,10 +4,21 @@ const navigateTo = (id) => {
     page.classList.add("hide");
   });
   //? show the needed page
-  document.getElementById(id).classList.remove("hide");
+  const page = document.getElementById(id);
+  page.classList.remove("hide");
   if (id === "vocabulary") {
     renderVocab();
+    Domtts.wrap(page);
   }
+};
+
+const PlayTTs = (selfs) => {
+  Domtts.wrap(selfs);
+  Domtts.iterate();
+};
+const PlayTTs2 = () => {
+  Domtts.wrap(document.getElementById("chat-history"));
+  Domtts.iterate();
 };
 
 // ? a powerful function that executes and loads html files via network when needed

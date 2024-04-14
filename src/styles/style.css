@@ -453,6 +453,8 @@ body.light {
   border-bottom-right-radius: 0;
   padding-bottom: 20px;
   padding-top: 2rem;
+  max-width: 960px;
+  margin: 0px auto;
 }
 
 .flex-x {
