@@ -111,55 +111,7 @@ class MessageBox {
     }
   }
 }
-
-// Creation of Message Box class, and the sample usage
-// const msgbox = new MessageBox({
-//   closeTime: 10000,
-//   hideCloseButton: false,
-// });
-// const msgboxPersistent = new MessageBox({
-//   closeTime: 0,
-// });
-module.exports.msgboxNoClose = new MessageBox({
+const msgboxNoClose = new MessageBox({
   closeTime: 2000,
   hideCloseButton: true,
 });
-
-// document.querySelector("#msgboxPersistent").addEventListener("click", () => {
-//   msgboxPersistent.show(
-//     "Hello! I am a persistent message box! I will hide myself if you close me."
-//   );
-// });
-
-// msgboxShowMessage.addEventListener("click", () => {
-//   msgbox.show(
-//     "Hello! I am a non-persistent message box! I will hide myself automatically after 5 seconds, but you may also close me.",
-//     null
-//   );
-// });
-
-// msgboxHiddenClose.addEventListener("click", () => {
-//   msgboxNoClose.show(
-//     "Hello! My close button is hidden, but I will close myself after 5 seconds."
-//   );
-// });
-
-// Show the message at the beginning
-// msgboxNoClose.show(
-//   "Hello! I am a message box! I will appear on the page load period. I also have a callback. You may check on 'Console' to see.",
-//   () => {
-//     console.log(
-//       "I am the callback! Of course, you may add various javaScript codes to make the callback function colourful."
-//     );
-//   },
-//   "OK"
-// );
-// msgboxNoClose.show(
-//   "Please login to continue!",
-//   () => {
-//     console.log(
-//       "I am the callback! Of course, you may add various javaScript codes to make the callback function colourful."
-//     );
-//   },
-//   "OK"
-// );

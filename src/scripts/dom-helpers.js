@@ -31,18 +31,18 @@ function Rhoda(l) {
   }
   return fg;
 }
-export function $if(condition, ...elements) {
+function $if(condition, ...elements) {
   if (condition) {
     return elements;
   }
 }
-export function $ifelse(condition, ifTrue, ifFalse) {
+function $ifelse(condition, ifTrue, ifFalse) {
   if (condition) {
     return ifTrue;
   }
   return ifFalse;
 }
-export function $case(value, ...elements) {
+function $case(value, ...elements) {
   return (key) => {
     if (key === value) {
       return elements;
@@ -50,7 +50,7 @@ export function $case(value, ...elements) {
     return;
   };
 }
-export function $switch(key, ...cases) {
+function $switch(key, ...cases) {
   if (cases.length) {
     for (let i = 0; i < cases.length; i++) {
       const case_N = cases[i];
@@ -62,7 +62,7 @@ export function $switch(key, ...cases) {
   }
   return;
 }
-export function loop(datalist, component) {
+function loop(datalist, component) {
   if (typeof component !== "function") {
     throw new Error(
       " \u2718  Cradova err :  Invalid component type, must be a function that returns html  "
@@ -70,7 +70,7 @@ export function loop(datalist, component) {
   }
   return Array.isArray(datalist) ? datalist.map(component) : undefined;
 }
-export var makeElement = (element, ElementChildrenAndPropertyList) => {
+var makeElement = (element, ElementChildrenAndPropertyList) => {
   let props = {},
     text = null;
   if (ElementChildrenAndPropertyList.length !== 0) {
@@ -131,76 +131,76 @@ export var makeElement = (element, ElementChildrenAndPropertyList) => {
   }
   return element;
 };
-export var cra = (tag) => {
+var cra = (tag) => {
   const extend = (...Children_and_Properties) =>
     makeElement(document.createElement(tag), Children_and_Properties);
   return extend;
 };
 
 // src/primitives/dom-objects.ts
-export var a = cra("a");
-export var article = cra("article");
-export var audio = cra("audio");
-export var br = cra("br");
-export var button = cra("button");
-export var canvas = cra("canvas");
-export var caption = cra("caption");
-export var col = cra("col");
-export var colgroup = cra("colgroup");
-export var datalist = cra("datalist");
-export var details = cra("details");
-export var dialog = cra("dialog");
-export var div = cra("div");
-export var figure = cra("figure");
-export var footer = cra("footer");
-export var form = cra("form");
-export var h1 = cra("h1");
-export var h2 = cra("h2");
-export var h3 = cra("h3");
-export var h4 = cra("h4");
-export var h5 = cra("h5");
-export var h6 = cra("h6");
-export var head = cra("head");
-export var header = cra("header");
-export var hr = cra("hr");
-export var i = cra("i");
-export var iframe = cra("iframe");
-export var img = cra("img");
-export var input = cra("input");
-export var label = cra("label");
-export var li = cra("li");
-export var main = cra("main");
-export var nav = cra("nav");
-export var ol = cra("ol");
-export var optgroup = cra("optgroup");
-export var option = cra("option");
-export var p = cra("p");
-export var progress = cra("progress");
-export var q = cra("q");
-export var section = cra("section");
-export var select = cra("select");
-export var source = cra("source");
-export var span = cra("span");
-export var strong = cra("strong");
-export var summary = cra("summary");
-export var table = cra("table");
-export var tbody = cra("tbody");
-export var td = cra("td");
-export var template = cra("template");
-export var textarea = cra("textarea");
-export var th = cra("th");
-export var title = cra("title");
-export var tr = cra("tr");
-export var track = cra("track");
-export var u = cra("u");
-export var ul = cra("ul");
-export var video = cra("video");
-export var svg = (svg2, properties) => {
+var a = cra("a");
+var article = cra("article");
+var audio = cra("audio");
+var br = cra("br");
+var button = cra("button");
+var canvas = cra("canvas");
+var caption = cra("caption");
+var col = cra("col");
+var colgroup = cra("colgroup");
+var datalist = cra("datalist");
+var details = cra("details");
+var dialog = cra("dialog");
+var div = cra("div");
+var figure = cra("figure");
+var footer = cra("footer");
+var form = cra("form");
+var h1 = cra("h1");
+var h2 = cra("h2");
+var h3 = cra("h3");
+var h4 = cra("h4");
+var h5 = cra("h5");
+var h6 = cra("h6");
+var head = cra("head");
+var header = cra("header");
+var hr = cra("hr");
+var i = cra("i");
+var iframe = cra("iframe");
+var img = cra("img");
+var input = cra("input");
+var label = cra("label");
+var li = cra("li");
+var main = cra("main");
+var nav = cra("nav");
+var ol = cra("ol");
+var optgroup = cra("optgroup");
+var option = cra("option");
+var p = cra("p");
+var progress = cra("progress");
+var q = cra("q");
+var section = cra("section");
+var select = cra("select");
+var source = cra("source");
+var span = cra("span");
+var strong = cra("strong");
+var summary = cra("summary");
+var table = cra("table");
+var tbody = cra("tbody");
+var td = cra("td");
+var template = cra("template");
+var textarea = cra("textarea");
+var th = cra("th");
+var title = cra("title");
+var tr = cra("tr");
+var track = cra("track");
+var u = cra("u");
+var ul = cra("ul");
+var video = cra("video");
+var svg = (svg2, properties) => {
   const span2 = document.createElement("span");
   span2.innerHTML = svg2;
   return makeElement(span2, properties || []);
 };
-export var raw = (html) => {
+var raw = (html) => {
   const div2 = document.createElement("div");
   div2.innerHTML = html;
   const df = new DocumentFragment();
