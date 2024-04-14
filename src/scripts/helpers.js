@@ -5,6 +5,9 @@ const navigateTo = (id) => {
   });
   //? show the needed page
   document.getElementById(id).classList.remove("hide");
+  if (id === "vocabulary") {
+    renderVocab();
+  }
 };
 
 // ? a powerful function that executes and loads html files via network when needed

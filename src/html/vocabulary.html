@@ -4,14 +4,8 @@
     margin: 1rem;
   }
 
-  h2 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
   .category {
-    margin-bottom: 30px;
+    margin-bottom: 5rem;
   }
 
   .category h3 {
@@ -21,6 +15,21 @@
   }
 
   .category ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+  }
+  .category ul li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 12px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.75rem;
+    color: #333;
+    text-align: center;
   }
   .word {
     display: flex;
@@ -59,63 +68,5 @@
 </style>
 
 <div id="vocabulary" class="page">
-  <div class="container">
-    <h2>Common Vocabulary</h2>
-    <div class="category">
-      <h3>Greetings</h3>
-      <ul id="Greetings"></ul>
-    </div>
-    <div class="category">
-      <h3>Numbers</h3>
-      <ul id="Numbers"></ul>
-    </div>
-    <div class="category">
-      <h3>Colors</h3>
-      <ul id="Colors"></ul>
-    </div>
-    <div class="category">
-      <h3>Days of the Week</h3>
-      <ul id="DaysOfWeek"></ul>
-    </div>
-    <div class="category">
-      <h3>Months of the Year</h3>
-      <ul id="MonthsOfYear"></ul>
-    </div>
-    <div class="category">
-      <h3>Common Objects</h3>
-      <ul id="CommonObjects"></ul>
-    </div>
-    <div class="category">
-      <h3>Food and Drinks</h3>
-      <ul id="FoodAndDrinks"></ul>
-    </div>
-    <div class="category">
-      <h3>Family Members</h3>
-      <ul id="FamilyMembers"></ul>
-    </div>
-    <div class="category">
-      <h3>Animals</h3>
-      <ul id="Animals"></ul>
-    </div>
-    <div class="category">
-      <h3>Clothing</h3>
-      <ul id="Clothing"></ul>
-    </div>
-
-    <!-- Advanced Vocabulary -->
-    <h2>Advanced Vocabulary</h2>
-    <div class="category">
-      <h3>Technology</h3>
-      <ul id="Technology"></ul>
-    </div>
-    <!-- Repeat the above structure for other categories -->
-
-    <!-- Cultural Vocabulary -->
-    <h2>Cultural Vocabulary</h2>
-    <div class="category">
-      <h3>Cuisine</h3>
-      <ul id="Cuisine"></ul>
-    </div>
-    <!-- Repeat the above structure for other categories -->
-  </div>
+  <div class="container" id="container"></div>
 </div>
