@@ -3,14 +3,11 @@
   <div class="flex-y-center h-30-vh">
     <div class="flex">
       <div class="flex-x">
-        <img src="./assets/" alt="" />
+        <img src="./assets/apple-touch-icon.png" style="width: 60px" alt="" />
         <h2>Linguaverse</h2>
       </div>
-      <div id="user" class="flex-y">
-        <div>Hello, Alex</div>
-        <!-- languages -->
-      </div>
-      <div class="flex-x">
+      <div id="user" class="flex-y"></div>
+      <div class="flex-x-y">
         <div><span>your scores: 206</span></div>
         <div><span>Lessons: 17</span></div>
       </div>
@@ -19,11 +16,11 @@
   <div class="h-70-vh sup-bg">
     <h2 style="margin-top: 1rem">Let's begin studying</h2>
     <div class="gallery">
-      <div class="action-wrapper">
-        <img src="./assets/writting.png" alt="" />
+      <div class="action-wrapper" onclick="navigateTo('vocabulary')">
+        <img src="./assets/vocabulary.png" alt="" />
         <div>
-          <h3>Writing Lesson</h3>
-          <span>Start Writing</span>
+          <h3>Vocabulary Lesson</h3>
+          <h3>Start Reading</h3>
         </div>
       </div>
       <div class="action-wrapper">
@@ -35,13 +32,14 @@
         </div>
       </div>
       <div class="action-wrapper">
-        <img src="./assets/vocabulary.png" alt="" />
+        <img src="./assets/writting.png" alt="" />
         <div>
-          <h3>Vocabulary Lesson</h3>
-          <h3>Start Reading</h3>
+          <h3>Writing Lesson</h3>
+          <span>Start Writing</span>
         </div>
       </div>
-      <div class="action-wrapper">
+
+      <div class="action-wrapper" onclick="navigateTo('chat')">
         <img src="./assets/apple-touch-icon.png" alt="" />
         <div>
           <h3>Conversation</h3>

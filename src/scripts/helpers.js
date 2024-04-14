@@ -58,4 +58,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   loadHTML("sections", "/src/html/progress.html");
   loadHTML("sections", "/src/html/chat.html");
+  loadHTML("sections", "/src/html/vocabulary.html");
 });

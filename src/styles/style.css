@@ -461,6 +461,14 @@ body.light {
   /* border: 1px red solid; */
   gap: 4px;
 }
+.flex-x-y {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5px;
+  gap: 4px;
+}
 
 .action-wrapper {
 }
