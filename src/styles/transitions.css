@@ -1,0 +1,44 @@
+:root {
+  --animation-timing: 0.3s;
+}
+
+.CRADOVA-UI-SLIDE-RIGHT {
+  animation: slide-right var(--animation-timing) ease-in-out;
+}
+
+.CRADOVA-UI-SLIDE-LEFT {
+  animation: slide-left var(--animation-timing) ease-in-out;
+}
+
+.CRADOVA-UI-FADE-IN {
+  animation: fade-in var(--animation-timing) ease;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-70%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(70%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+

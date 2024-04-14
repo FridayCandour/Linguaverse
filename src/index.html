@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/destop.css" />
+    <link rel="stylesheet" href="./styles/transitions.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#1976d2" />
+    <meta name="background-color" content="#fafafa" />
+    <title>Linguaverse</title>
+    <script>
+      //   if (!location.origin.includes("local") && "serviceWorker" in navigator) {
+      //     navigator.serviceWorker.register("./sw.js");
+      //   }
+    </script>
+    <link rel="manifest" href="./manifest.json" />
+    <meta
+      name="description"
+      content="Linguaverse is a Language learning solution for everyone!"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta data-hid="charset" charset="utf-8" />
+    <meta
+      data-hid="mobile-web-app-capable"
+      name="mobile-web-app-capable"
+      content="yes"
+    />
+    <meta
+      data-hid="apple-mobile-web-app-title"
+      name="apple-mobile-web-app-title"
+      content="Linguaverse"
+    />
+    <meta data-hid="author" name="author" content="friday candour" />
+    <meta
+      data-hid="og:type"
+      name="og:type"
+      property="og:type"
+      content="website"
+    />
+    <meta
+      data-hid="og:title"
+      name="og:title"
+      property="og:title"
+      content="A place to learn"
+    />
+    <meta
+      data-hid="og:site_name"
+      name="og:site_name"
+      property="og:site_name"
+      content="Linguaverse"
+    />
+  </head>
+  <body>
+    <main id="sections">
+      <!-- join -->
+      <div id="join" class="page cover">
+        <div class="flex-y-center h-70-per gap-12">
+          <img src="./assets/logo-banner-type.png" class="logo" alt="" />
+          <h1>Language Learning powered with AI</h1>
+          <h3>Learn effectively, Learn now!</h3>
+        </div>
+        <button class="button" onclick="navigateTo('home')">
+          Get Started!
+        </button>
+      </div>
+      <!-- home -->
+      <div id="home" class="page colored-screen">
+        <div class="flex-y-center h-30-vh">
+          <div class="flex">
+            <img src="" alt="" />
+            <div class="flex-y">
+              <div>Hello, Alex</div>
+              <div>English</div>
+            </div>
+            <div class="flex-x">
+              <div><span>your scores: 206</span></div>
+              <div><span>Lessons: 17</span></div>
+            </div>
+          </div>
+          <h1>home view</h1>
+        </div>
+        <div class="h-70-vh sup-bg gallery">
+          <h1>home view</h1>
+        </div>
+      </div>
+      <!-- explorer -->
+      <div id="explorer" class="page">
+        <div class="">
+          <h1>Language explorer</h1>
+        </div>
+      </div>
+      <!-- progress -->
+      <div id="progress" class="page">
+        <div class="">
+          <h1>Your Progress</h1>
+        </div>
+      </div>
+      <!-- reading -->
+      <!-- listening -->
+      <!-- speaking -->
+      <!-- conversation -->
+    </main>
+    <div class="navigation">
+      <img src="./assets/apple-touch-icon.png" class="hide" alt="" />
+      <ul class="listWrap">
+        <a href="javascript:void(0);" onclick="navigateTo('home')">
+          <li class="list active">
+            <i class="icon">
+              <ion-icon name="planet"></ion-icon>
+            </i>
+            <span class="text">Home</span>
+          </li>
+        </a>
+        <a href="javascript:void(0);" onclick="navigateTo('explorer')">
+          <li class="list">
+            <i class="icon">
+              <ion-icon name="telescope"></ion-icon>
+            </i>
+            <span class="text">Explorer</span>
+          </li>
+        </a>
+        <a href="javascript:void(0);" onclick="navigateTo('progress')">
+          <li class="list">
+            <i class="icon">
+              <ion-icon name="balloon"></ion-icon>
+            </i>
+            <span class="text">Progress</span>
+          </li>
+        </a>
+      </ul>
+    </div>
+    <script src="./scripts/helpers.js"></script>
+    <!-- <script src="./index.js"></script> -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
