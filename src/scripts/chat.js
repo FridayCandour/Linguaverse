@@ -19,20 +19,11 @@ const generate = async ({ text, lang }) => {
     clearTimeout(to);
     const out = await res.json();
 
-    if (!out.ok) {
-      if (res.status !== 400) {
-        document.getElementById("words").style.display = "flex";
-        document.getElementById("login-loader").style.display = "none";
-        document.getElementById("login").style.display = "block";
-      } else {
-        msgboxNoClose.show("An error happened. Please try again!", null, "OK");
-      }
-    }
     return {
-      text: out.message,
+      text: out?.response?.response,
     };
   } catch (error) {
-    console.log(error);
+    console.log({ error });
     msgboxNoClose.show("An error happened. Please try again!", null, "OK");
     return {
       text: "An error happened. Please try again!",
@@ -74,8 +65,7 @@ const addAIMSG = async ({ text }) => {
   loader.style.display = "inline-grid";
   history.appendChild(loader);
   loader.scrollIntoView({ behavior: "smooth", block: "start" });
-  let data = generate({ text });
-
+  let data = await generate({ text });
   // call api
   const msg = ({ text }) =>
     li(
@@ -107,4 +97,5 @@ const fromC = (e) => {
   addUserMSG({
     text: usersInput.value,
   });
+  usersInput.value = "";
 };
