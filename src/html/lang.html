@@ -1,0 +1,129 @@
+<div class="dropdown">
+  <button class="dropdown-btn">Select a language</button>
+  <div class="dropdown-content">
+    <a href="#">Afrikaans</a>
+    <a href="#">Amharic</a>
+    <a href="#">Arabic</a>
+    <a href="#">Asturian</a>
+    <a href="#">Azerbaijani</a>
+    <a href="#">Bashkir</a>
+    <a href="#">Belarusian</a>
+    <a href="#">Bulgarian</a>
+    <a href="#">Bengali</a>
+    <a href="#">Breton</a>
+    <a href="#">Bosnian</a>
+    <a href="#">Catalan</a>
+    <a href="#">Cebuano</a>
+    <a href="#">Czech</a>
+    <a href="#">Welsh</a>
+    <a href="#">Danish</a>
+    <a href="#">German</a>
+    <a href="#">Greeek</a>
+    <a href="#">English</a>
+    <a href="#">Spanish</a>
+    <a href="#">Estonian</a>
+    <a href="#">Persian</a>
+    <a href="#">Fulah</a>
+    <a href="#">Finnish</a>
+    <a href="#">French</a>
+    <a href="#">Western Frisian</a>
+    <a href="#">Irish</a>
+    <a href="#">Gaelic</a>
+    <a href="#">Galician</a>
+    <a href="#">Gujarati</a>
+    <a href="#">Hausa</a>
+    <a href="#">Hebrew</a>
+    <a href="#">Hindi</a>
+    <a href="#">Croatian</a>
+    <a href="#">Haitian</a>
+    <a href="#">Hungarian</a>
+    <a href="#">Armenian</a>
+    <a href="#">Indonesian</a>
+    <a href="#">Igbo</a>
+    <a href="#">Iloko</a>
+    <a href="#">Icelandic</a>
+    <a href="#">Italian</a>
+    <a href="#">Japanese</a>
+    <a href="#">Javanese</a>
+    <a href="#">Georgian</a>
+    <a href="#">Kazakh</a>
+    <a href="#">Central Khmer</a>
+    <a href="#">Kannada</a>
+    <a href="#">Korean</a>
+    <a href="#">Luxembourgish</a>
+    <a href="#">Ganda</a>
+    <a href="#">Lingala</a>
+    <a href="#">Lao</a>
+    <a href="#">Lithuanian</a>
+    <a href="#">Latvian</a>
+    <a href="#">Malagasy</a>
+    <a href="#">Macedonian</a>
+    <a href="#">Malayalam</a>
+    <a href="#">Mongolian</a>
+    <a href="#">Marathi</a>
+    <a href="#">Malay</a>
+    <a href="#">Burmese</a>
+    <a href="#">Nepali</a>
+    <a href="#">Dutch</a>
+    <a href="#">Norwegian</a>
+    <a href="#">Northern Sotho</a>
+    <a href="#">Occitan</a>
+    <a href="#">Oriya</a>
+    <a href="#">Panjabi</a>
+    <a href="#">Polish</a>
+    <a href="#">Pushto</a>
+    <a href="#">Portuguese</a>
+    <a href="#">Romanian</a>
+    <a href="#">Russian</a>
+    <a href="#">Sindhi</a>
+    <a href="#">Sinhala</a>
+    <a href="#">Slovak</a>
+    <a href="#">Slovenian</a>
+    <a href="#">Somali</a>
+    <a href="#">Albanian</a>
+    <a href="#">Serbian</a>
+    <a href="#">Swati</a>
+    <a href="#">Sundanese</a>
+    <a href="#">Swedish</a>
+    <a href="#">Swahili</a>
+    <a href="#">Tamil</a>
+    <a href="#">Thai</a>
+    <a href="#">Tagalog</a>
+    <a href="#">Tswana</a>
+    <a href="#">Turkish</a>
+    <a href="#">Ukrainian</a>
+    <a href="#">Urdu</a>
+    <a href="#">Uzbek</a>
+    <a href="#">Vietnamese</a>
+    <a href="#">Wolof</a>
+    <a href="#">Xhosa</a>
+    <a href="#">Yiddish</a>
+    <a href="#">Yoruba</a>
+    <a href="#">Chinese</a>
+    <a href="#">Zulu</a>
+  </div>
+</div>
+<script>
+  function toggleDropdown() {
+    var dropdownContent = document.getElementById("languageDropdown");
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropdown-btn")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.style.display === "block") {
+          openDropdown.style.display = "none";
+        }
+      }
+    }
+  };
+</script>
