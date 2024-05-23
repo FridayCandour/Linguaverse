@@ -1,0 +1,20 @@
+@import "./bundles/simplebar/simplebar.css";
+@import "./bundles/choice/choices.css";
+@import "./bundles/dropzone/dropzone.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  animation: fade 300ms linear forwards;
+}

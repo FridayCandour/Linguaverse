@@ -1,0 +1,25 @@
+@import "./bundles/simplebar/simplebar.css";
+@import "./bundles/quill/quill.css";
+@import "./bundles/choice/choices.css";
+@import "./bundles/dropzone/dropzone.css";
+@import "./bundles/photoswipe/photoswipe.css";
+@import "./bundles/img-compairison-slider/style.css";
+@import "./bundles/swiper/swiper-bundle.css";
+@import "./bundles/highlight/a11y-dark.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  animation: fade 300ms linear forwards;
+}
